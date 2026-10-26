@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "แปลหน้านี้ (EN-TH / TH-EN)",
+  "version": "1.0.0",
+  "description": "กดปุ่มเดียวเพื่อแปลหน้าเว็บที่เปิดอยู่ (หรือข้อความที่เลือก) ด้วย API แปลของเรา และเก็บคำแปลไว้ในเครื่อง",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "แปลหน้านี้",
+    "default_icon": { "16": "icons/icon16.png", "32": "icons/icon32.png" }
+  },
+  "permissions": ["activeTab", "scripting", "storage"],
+  "icons": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "translate-page@example.com",
+      "strict_min_version": "109.0"
+    }
+  }
+}

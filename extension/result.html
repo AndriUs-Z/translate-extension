@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <title>ผลการแปล</title>
+  <style>
+    :root { --fg:#1a1a1a; --bg:#fff; --muted:#777; --line:#ddd; --accent:#2563eb; }
+    @media (prefers-color-scheme: dark) { :root { --fg:#eee; --bg:#1e1e1e; --muted:#999; --line:#444; --accent:#6ea8ff; } }
+    body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.7 system-ui, sans-serif; }
+    main { max-width:820px; margin:0 auto; padding:20px 16px 60px; }
+    h1 { font-size:20px; margin:0 0 4px; }
+    a { color:var(--accent); }
+    #status { color:var(--muted); font-size:14px; margin:6px 0 12px; }
+    .bar { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px; }
+    button { font:inherit; padding:4px 12px; border:1px solid var(--line); background:transparent; color:var(--fg); border-radius:6px; cursor:pointer; }
+    .block { margin:0 0 16px; padding-bottom:12px; border-bottom:1px solid var(--line); }
+    .orig { color:var(--muted); font-size:14px; }
+    .tr { margin-top:4px; }
+    .cached { font-size:12px; color:var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1 id="title">กำลังโหลด...</h1>
+    <div><a id="src" target="_blank" rel="noopener noreferrer" hidden>เปิดหน้าต้นฉบับ</a></div>
+    <div id="status"></div>
+    <div class="bar">
+      <button id="copy" type="button">คัดลอกคำแปลทั้งหมด</button>
+      <button id="clear" type="button">ล้างแคชคำแปลในเครื่อง</button>
+    </div>
+    <div id="body"></div>
+  </main>
+  <script src="config.js"></script>
+  <script src="lib.js"></script>
+  <script src="result.js"></script>
+</body>
+</html>
